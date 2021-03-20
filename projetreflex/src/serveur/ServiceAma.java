@@ -52,7 +52,7 @@ public class ServiceAma implements Runnable {
 			if(Amateur!=null) {
 				synchronized (Amateur) {
 				try {
-					out.print("veuiliz ecrire votre destiantaire" );
+					out.print("veuillez ecrire votre destiantaire" );
 					String DestLog = in.readLine();
 					Amateur AmateurDest=getAmateurDestinater(DestLog);
 					if(AmateurDest!=null) {
@@ -60,13 +60,13 @@ public class ServiceAma implements Runnable {
 							out.print("veuiliz ecrire votre message");
 							String Message=in.readLine();
 							getAmateurDestinater(DestLog).AjoutMessagrie(Login, Message);
-							out.println("votre message est bien envoyee");
+							out.println("votre message est bien envoye");
 							
 						}
 						catch(Exception e){
 							out.println(e.getMessage());
 						}
-					}else {out.println("votre destinatire n'exite pas");}
+					}else {out.println("votre destinatire n'existe pas");}
 					
 				}
 				catch(Exception e){
@@ -74,7 +74,7 @@ public class ServiceAma implements Runnable {
 				}
 				}}
 			else {
-				out.println("votre login ou votre mdp sont incorrect");
+				out.println("votre login ou votre mdp est incorrect");
 			}
 			break;
 			
@@ -118,7 +118,7 @@ public class ServiceAma implements Runnable {
 			Constructor<? extends Service> niou = classe.getConstructor(java.net.Socket.class);
 			Service service = niou.newInstance(this.client);
 			service.run();
-			/*Method runne = classe.getMethod("run");
+			/*Method run = classe.getMethod("run");
 			runne.invoke(service);*/
 		} catch (SecurityException | InstantiationException | IllegalAccessException
 				| IllegalArgumentException | InvocationTargetException | NoSuchMethodException e) {

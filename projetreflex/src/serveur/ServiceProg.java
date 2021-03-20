@@ -40,8 +40,8 @@ public class ServiceProg implements Runnable {
 					PrintWriter out = new PrintWriter(client.getOutputStream(), true);
 
 out.println("veuiliez choisir la service:");
-out.println("pour Fournir un nouveau service tabez 1");
-out.println("pour Mettre-à-jour un service tabez 2");
+out.println("pour Fournir un nouveau service tapez 1");
+out.println("pour Mettre-à-jour un service tapez 2");
 out.println("pour Déclarer un changement d’adresse de votre serveur ftp tapez 3");
 int x = Integer.parseInt(in.readLine());
 
