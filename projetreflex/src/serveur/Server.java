@@ -20,8 +20,8 @@ public class Server implements Runnable {
 			System.err.println("Lancement du serveur au port " + this.listen_socket.getLocalPort());
 
 			while (true) {
-				switch (this.listen_socket.getLocalPort()) {// ce switch est la pour differncer les serveices par raport
-															// aux port assocsie
+				switch (this.listen_socket.getLocalPort()) {// ce switch est la pour differencier les services par rapport
+															// aux ports associe
 				case 3000:
 					new Thread(new ServiceProg(listen_socket.accept())).start();
 					break;
