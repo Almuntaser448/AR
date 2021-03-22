@@ -23,7 +23,17 @@ public class ServiceRegistry {
 		validation(runnableClass);
 		servicesClasses.add(runnableClass);
 	}
-
+	
+	public static void removeService(String runnableClass)  {	
+		//supprimer la Service
+	 try {
+			 Class<? extends Service> act = (Class<? extends Service>) Class.forName(runnableClass);
+			 servicesClasses.remove(act);	 
+		 } catch (ClassNotFoundException e) {
+			        e.printStackTrace();
+			}
+		
+	}
 	// une méthode de validation renvoie void et lève une exception si non validation
 	// surtout pas de retour boolean !
 	private static void validation(Class<? extends Service> classe) throws ValidationException {

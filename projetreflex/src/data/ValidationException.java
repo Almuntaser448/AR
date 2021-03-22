@@ -1,4 +1,4 @@
-package bri;
+package data;
 
 public class ValidationException extends Exception {
 
