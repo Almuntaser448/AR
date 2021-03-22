@@ -44,19 +44,12 @@ public class ServiceProg implements Runnable {
 			BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
 			PrintWriter out = new PrintWriter(client.getOutputStream(), true);
 
-<<<<<<< HEAD
+
 			out.println("veuliez ecrire votre login");
 			String log = in.readLine();
 			out.println("veuliez ecrire votre mdp");
 			String mdp = in.readLine();
 			Programeur programeur = getProgrameur(log, mdp);
-=======
-out.println("veuiliez choisir la service:");
-out.println("pour Fournir un nouveau service tapez 1");
-out.println("pour Mettre-à-jour un service tapez 2");
-out.println("pour Déclarer un changement d’adresse de votre serveur ftp tapez 3");
-int x = Integer.parseInt(in.readLine());
->>>>>>> branch 'master' of https://github.com/Almuntaser448/AR.git
 
 			out.println("veuiliez choisir la service:");
 			out.println("pour Fournir un nouveau service tabez 1");
